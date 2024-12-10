@@ -1,5 +1,11 @@
-:root
-
+:root {
+--primary-color: #e36414;
+--secondary-color: #48392a;
+--accent1-color: #ade8f4;
+--accent2-color: #333d29;
+--heading-font: "Oswald Bold 700";
+--text-font: "Lato 400";
+}
 /* The following CSS selector (rule) removes underlines from all hyperlinks. Do not do this. */
 a {
     text-decoration: none;
@@ -11,18 +17,16 @@ a {
 }
 
 header {
-    margin: 1rem auto;
     display: grid;
-    grid-template-columns: 120px 1fr 2fr;
-    align-items: center;
+    grid-template-columns: 150px auto;
     border-bottom: 1px solid #ccc;
-    max-width: 1000px;
+    grid-gap: 2rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
 }
 
-.logo img {
-    margin: 0 0.25rem 0 1rem;
-    width: 64px;
-    height: auto;
+header img {
+    width: 150px;
 }
 
 h1 {
@@ -33,30 +37,14 @@ h1 {
 nav {
     text-align: right;
     display: flex;
-    flex: row; 
+    font-family: var(--heading-font);
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: large;
 }
-
-.navigation {
-    display: flex;
-    list-style: none;
-    align-items: center
-}
-
-.navigation li {
-    flex: 1 1 100%;
-}
-
-.navigation a {
-    display: block;
-    color: navy;
-    padding: 20px;
-    text-decoration: none;
-}
-
-.navigation a :hover {
-    color: tomato;
-    font-weight: 700;
-    text-decoration: underline;
+nav a {
+    padding: 1.5rem 2rem;
+    color: white;
 }
 
 main {
@@ -65,34 +53,38 @@ main {
     font-family: Oswald
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 700
-
-.oswald-<uniquifier> {
-  font-family: "Oswald", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 700
-
-.oswald-<uniquifier> {
-  font-family: "Oswald", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
 h1 {
     text-align: center;
     font-size: 1.5rem;
     text-shadow: 3px 3px 5px #777;
 }
 
-.herodiv {
-    margin: 10px auto;
+.hero {
+    position: relative;
+    top: 0.1rem;
+}
+.hero h1 {
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    background-color: var(--accent1-color);
+
+}
+.hero article {
+    position: absolute;
+    top: 3rem;
+    max-width: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: var(--accent1-color);
+    height: 100px;
+}
+.hero article img {
+    float: right;
+    width: 150px;
 }
 
 .hero img {
@@ -106,16 +98,129 @@ h2 {
     border-bottom: 1px solid #999;
     margin-bottom: 0.3rem;
 }
-
+.history {
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+}
+.history h2{
+    text-align: center;
+    grid: 1/4;
+}
+.history img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+.adventure {
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    padding-bottom: 5rem;
+    grid-gap: 2rem;
+}
+.adventure div {
+    display: flex;
+    flex-flow:row;
+}
+.adventure figure {
+    max-height: 100px;
+}
+.adventure figure img {
+    max-height: 200px;
+    border-radius: 8px;
+}
+.adventure figcaption {
+    background-color: var(--accent2-color);
+    color: #ade8f4;
+    text-align: justify;
+}
+/* Image container */
+.employee {
+    display: flex;
+    flex-direction: column; /*Default: column layout */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    align-items: center; /* Center images horizontally */
+}
+.employee img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Media query for screens 768px or larger screens */
+@media (min-width: 768px) {
+    .employee {
+        flex-direction: row; /* Change to row layout on larger */
+        justify-content: center; /* Center images horizonally */
+    }
+}
+.employee img {
+    width: 200px;; /* Set a fixed width for each image in a row */
+}
+.form-container {
+    width: 40%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+.radio-group label {
+    margin-bottom: 5px;
+}
+input[type="radio"] {
+    margin-right: 10px;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
 footer {
-    position: fixed;
     bottom: 0;
     margin: 1rem;
     border-top: 1px solid #000;
-    padding: 0.5rem;
+    padding: 1rem;
     color: navy;
     font-weight: 700;
     font-style:italic;
     display: flex;
-    flex-flow: row-reverse; 
+    flex-flow: row-reverse;
 }
