@@ -3,12 +3,12 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About Page, Dry Oar Rafting">
+    <meta name="description" content="Home Page, Dry Oar Rafting">
     <meta name="author" content="Jessica Austin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<title>About Us-Dry Oar Rafting</title>
+<title>Home Page-Dry Oar Rafting</title>
 <link rel="stylesheet" href="styles/rafting.css">
     </head>
     <body>
@@ -22,45 +22,42 @@
             </nav>
         </header>
         <main>
-            <div class="hero">
-                <img src="images/raftingbackground.jpg" alt="Background Photo">
+            <div class="home">
                 <h1>Dry Oar Rafting</h1>
-                <article>
-                    <img src="images/happyclient.jpg" alt="Happy Client">
-                    <p> Find your adventure with us on the rapids! </p>
-                </article>
+                <img src="images/largehero.jpg" alt="Home Photo">
             </div>
             <section>
-                <h2>History</h2>
-                <p>The Dry Oar Rafting Company started in 1950 taking only a few passengers at a time down the Truckee River in Nevada and California.</p>
-            <img src="images/history.webp" alt="history img">
-                <p>sdkfjsldfjsldkfjsaldkfjldsfjleskfsldfj</p>
-            </section>
-            <section>
-                <h2>Adventure Awaits You!</h2>
+                <a href="trips.html">Take a Look at the Trips We Offer!</a>
                 <div class="adventure">
                 <figure>
-                <img src="images/raftingexample1.jpg" alt="Example 1" width="200">
-                <figcaption>Tour West Rapids</figcaption>
+                <img src="images/homepgraft1.jpg" alt="Example 1" width="200" height="175">
                 </figure>
                 <figure>
-                <img src="images/raftingexample2.jpg" alt="Example 2" width="200">
-                <figcaption>First Person POV of Canyons River Rapids</figcaption>
+                <img src="images/homepgraft2.jpg" alt="Example 2" width="200" height="175">
                 </figure>
                 <figure>
-                <img src="images/raftingexample3.jpg" alt="Example 3" width="200" height="150">
-                <figcaption>Green River Rapids</figcaption>
+                <img src="images/homepgraft3.jpg" alt="Example 3" width="200" height="175">
                 </figure>
-                <figure>
-                <img src="images/raftingexample4.jpg" alt="Example 4" width="200">
-                <figcaption>Solo Trip Rapids</figcaption>
-                </figure>
-                <figure>
-                <img src="images/raftingexample5.jpg" alt="Example 5" width="200">
-                <figcaption>Guided Personal Rapids Adventure</figcaption>
-                </figure>
+                <p>Join our family and embark on an adventure of a lifetime with us!</p>
                 </div>
             </section>
+
+            <div class="container">
+                <h1>Stay Updated on Rafting Adventures!</h1>
+                <p>Sign up for our newsletter and get the latest news, tips, and special offers directly in your inbox!</p>
+        
+                <form id="signupForm" action="#" method="POST" onsubmit="return validateForm()">
+                    <label for="name">Full Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required><br>
+        
+                    <label for="email">Email Address</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        
+                    <button type="submit">Sign Up</button>
+                </form>
+        
+                <div id="responseMessage" class="message"></div>
+            </div>
         </main>
         <footer>
             <p> &copy;2024 Dry Oar Rafting 😎 Jessica Austin 😎</p>
