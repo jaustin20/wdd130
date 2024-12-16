@@ -1,5 +1,5 @@
 :root {
---primary-color: #e36414;
+--primary-color: #BC5210;
 --secondary-color: #48392a;
 --accent1-color: #ade8f4;
 --accent2-color: #333d29;
@@ -19,7 +19,7 @@ a {
 header {
     display: grid;
     grid-template-columns: 150px auto;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
     grid-gap: 2rem;
     padding: 1rem;
     background-color: var(--primary-color);
