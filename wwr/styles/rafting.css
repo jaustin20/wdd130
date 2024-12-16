@@ -101,18 +101,19 @@ h2 {
     margin-bottom: 0.3rem;
 }
 .history {
-    display: grid;
-    grid-template-rows: 2fr 1fr 2fr;
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space out text and image */
+    gap: 20px; /* Space between text and image */
 }
-.history h2{
-    text-align: center;
-    grid: 1/4fr;
+.history text-left, .text-right {
+    width: 45%; /* Each text block will take up 45% of the container width */
 }
 .history img {
-    width: 200px;
+    width: 100%; /* Make sure the image is responsive */
     height: auto;
-    border-radius: 8px;
-}
+    border-radius: 8px; /* Optional: rounded corners for the image */
+} 
 .adventure {
     text-align: center;
     padding: 1rem;
@@ -257,6 +258,75 @@ button:hover {
 .message {
     margin-top: 10px;
     font-size: 14px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+.trip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.trip-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.trip-card .trip-info {
+    padding: 15px;
+}
+.trip-card h3 {
+    font-size: 24px;
+    margin: 0;
+}
+.trip-card p {
+    color: #555;
+    font-size: 16px;
 }
 footer {
     bottom: 0;
